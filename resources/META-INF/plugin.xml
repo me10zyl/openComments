@@ -1,0 +1,35 @@
+<idea-plugin version="2">
+  <id>com.github.openComments</id>
+  <name>Open Comments</name>
+  <version>1.1</version>
+  <vendor email="me10zyl@qq.com">Zeng YiLun</vendor>
+
+  <description><![CDATA[
+      自动生成查询数据库表字段注释.(目前仅支持Oracle)<br>
+      Generate Database Table Column Comments SQL with Popup Menu.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      无最近更新
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="143.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.database</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="com.github.OpenComments" class="com.github.openComments.OpenCommentsAction" text="Open Column Comments"
+            description="Open Table Column Field Comments" >
+      <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="$SearchWeb"/>
+    </action>
+  </actions>
+
+</idea-plugin>
